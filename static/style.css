@@ -111,3 +111,40 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   font-weight: 700;
   color: var(--primary);
 }
+body {
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+#formulario {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.preview-caja {
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+#textoPreview {
+  color: var(--muted);
+}
+
+#preview {
+  max-height: 220px;
+}
