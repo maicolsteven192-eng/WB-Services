@@ -1,0 +1,113 @@
+/* Estilos para "Reconocedor MNIST"
+   Usa selectores por etiqueta, así funciona sin cambiar tu HTML. */
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(160deg, #eef2ff, var(--bg));
+  color: var(--text);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: var(--primary);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 420px;
+}
+
+/* Tarjeta contenedora (si tienes un div, section o main) */
+main, section, .container, #app {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Selector de archivo */
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed var(--primary);
+  border-radius: 12px;
+  background: #eef2ff;
+  color: var(--text);
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Previsualización */
+img {
+  max-width: 100%;
+  max-height: 240px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  object-fit: contain;
+  background: #fafafa;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover { background: var(--primary-dark); }
+button:active { transform: scale(0.98); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Resultado de la predicción (ajusta el id si el tuyo es otro) */
+#resultado, #result, #prediction, .resultado {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
